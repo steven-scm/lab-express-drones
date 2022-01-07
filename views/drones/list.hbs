@@ -1,1 +1,16 @@
 <h2>Available drones</h2>
+
+{{#if drones.length}}
+<ul id="list-hackers">
+    {{#each drones}}
+    <li>
+        <p>name: {{this.name}}</p>
+        <p>number of propellers: {{this.propellers}}</p>
+        <p>speed: {{this.maxSpeed}}</p>
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>sorry no drones yet</p>
+
+{{/if}}
